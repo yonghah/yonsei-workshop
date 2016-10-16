@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "library(httr)\nlibrary(jsonlite)\nlibrary(dplyr)\nlibrary(leaflet)\n\n# 공공보건포털 xhr\nurl <- \"http://www.g-health.kr/portal/health/pubHealthSearch/get_list.do\"\n\n# 보건기관 코드에 따라 데이터 가져오기\ngetMedIns <- function(code) {\n  # code 71, 72, 73 Bogeonso\n  # code 81 Pharmacy\n  pl <- list(cl_cd=code, rows=30000, cpage=1)\n  r <- POST(url, \n            body = pl, \n            add_headers(\n              'Content_Type' = \n                'application/x-www-form-urlencoded; charset=UTF-8' \n            )\n  )\n  res <- content(r,\"text\")\n  df <- jsonlite::fromJSON(res)\n  # 경위도 없는 데이터 제외\n  df <- df %>%\n    filter(x_pos != '') %>%\n    filter(y_pos != '') %>%\n    filter(cl_cd != '')\n  return(df)\n}\n\n# 보건소, 보건지소, 보건진료소\nbg71 <- getMedIns(71)\nbg72 <- getMedIns(72) \nbg73 <- getMedIns(73) \nbg <- bind_rows(bg71, bg72, bg73)\n\n# 약국\npharm <- getMedIns(81)\n\nm <- leaflet() %>% \n  addTiles('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png') %>% \n  setView(lng = 127.5, lat = 36, zoom = 7)\n\npal <- colorFactor(c(\"red\", \"green\", \"yellow\", \"orange\"), \n                   domain = c(\"71\", \"72\", \"73\", \"81\"))\n\naddCircleMarkers(m, lng = bg$x_pos, lat=bg$y_pos, \n                 radius = 2,\n                 color = pal(bg$cl_cd),\n                 stroke = FALSE, \n                 fillOpacity = 0.4)\n\naddCircleMarkers(m, lng = pharm$x_pos, lat=pharm$y_pos, \n                 radius = 2,\n                 color = pal(pharm$cl_cd),\n                 stroke = FALSE, \n                 fillOpacity = 0.4)\n",
+    "created" : 1476582517997.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2007776222",
+    "id" : "C3D00F49",
+    "lastKnownWriteTime" : 1476595222,
+    "last_content_update" : 1476595222920,
+    "path" : "~/Repo/twitR/health_ins_dist.r",
+    "project_path" : "health_ins_dist.r",
+    "properties" : {
+        "docOutlineVisible" : "0",
+        "notebook_format" : "html_document"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

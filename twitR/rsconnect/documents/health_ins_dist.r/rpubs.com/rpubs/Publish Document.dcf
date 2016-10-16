@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/218992/d83390e6f24a4521852fe6638d2d3530
+bundleId: https://api.rpubs.com/api/v1/document/218992/d83390e6f24a4521852fe6638d2d3530
+url: http://rpubs.com/yonghah/218992
+when: 1476595329.77517
