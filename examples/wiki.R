@@ -28,16 +28,14 @@ getRevisionHistory <- function(title, lang){
   url <<- paste("https://", lang, ".wikipedia.org/w/api.php", sep = "")
   # res$continue$rvcontinue가 없을 때까지 반복
   while(!is.null(rvc)) {
-    print(rvc)
     t <- getRevDates(title, rvc)
-    print(rvc)
     results <- c(results, t)
   }
   date_posixct <-  as.POSIXct(strptime(results, "%Y-%m-%dT%H:%M:%SZ", tz="UTC"))
   rt <- as.data.frame(date_posixct, date)
   rt <- rt %>% 
     mutate(date = as.Date(date_posixct)) %>%
-    mutate(month = as.Date(cut(date, breaks = "month"))) %>%
+    # mutate(month = as.Date(cut(date, breaks = "month"))) %>%
     mutate(title = title)
   return(rt)
 }
@@ -45,17 +43,28 @@ getRevisionHistory <- function(title, lang){
 # rt1 <- getRevisionHistory('Sinking_of_MV_Sewol', "en")
 # rt2 <- getRevisionHistory('세월호_침몰_사고', "ko")
 
-rt1 <- getRevisionHistory('GFriend', "en")
-rt2 <- getRevisionHistory('Lovelyz', "en")
-rt3 <- getRevisionHistory('Red_Velvet_(band)', "en")
-rt4 <- getRevisionHistory('Twice (band)', "en")
-rt5 <- getRevisionHistory('Mamamoo', "en")
-rt <- bind_rows(rt1, rt2, rt3, rt4, rt5)
+titles <- c('Seoul', 'Tokyo', 'Beijing', 'Shanghai', 'Hong_Kong', 'Singapore', 'Taipei')
+
+datalist <- list()
+i <- 1
+for (title in titles) {
+  print(title)
+  datalist[[i]] <- getRevisionHistory(title, "en")
+  i <- i + 1
+}
+rt <- bind_rows(datalist)
+
+# rt1 <- getRevisionHistory('GFriend', "en")
+# rt2 <- getRevisionHistory('Lovelyz', "en")
+# rt3 <- getRevisionHistory('Red_Velvet_(band)', "en")
+# rt4 <- getRevisionHistory('Twice (band)', "en")
+# rt5 <- getRevisionHistory('Mamamoo', "en")
+# rt <- bind_rows(rt1, rt2, rt3, rt4, rt5)
 
 # histogram
 ggplot(rt, aes(x=date)) + 
   geom_histogram(binwidth=10, alpha = 6/10, aes(y=..count..), fill="purple") +
-  scale_x_date(date_breaks = "1 month", date_labels = "%Y-%m") +
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
   # annotate("text", x = as.Date("2015-01-15"), y = 80, label = "Glass Bead") + # 유리구슬
   # annotate("text", x = as.Date("2015-07-23"), y = 50, label = "Me gustas tu") + # 오늘부터 우리는
   # annotate("text", x = as.Date("2016-01-25"), y = 180, label = "Rough") + # 시간을 달려서
