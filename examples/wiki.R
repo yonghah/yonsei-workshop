@@ -2,6 +2,9 @@ library(httr)
 library(ggplot2)
 library(dplyr)
 
+rvc <- ''
+url <- ''
+
 getRevDates <- function(title, rvid) {
   pl <- list(
     action='query', 
@@ -18,7 +21,6 @@ getRevDates <- function(title, rvid) {
   date <- unlist(lapply(rev, function(x) x$timestamp))
   date_posix <- as.POSIXct(strptime(date, "%Y-%m-%dT%H:%M:%SZ", tz="UTC"))
   rvc <<- res$continue$rvcontinue
-  print(rvc)
   return(date)
 }
 
@@ -35,13 +37,9 @@ getRevisionHistory <- function(title, lang){
   rt <- as.data.frame(date_posixct, date)
   rt <- rt %>% 
     mutate(date = as.Date(date_posixct)) %>%
-    # mutate(month = as.Date(cut(date, breaks = "month"))) %>%
     mutate(title = title)
   return(rt)
 }
-
-# rt1 <- getRevisionHistory('Sinking_of_MV_Sewol', "en")
-# rt2 <- getRevisionHistory('세월호_침몰_사고', "ko")
 
 # titles <- c('Seoul', 'Tokyo', 'Beijing', 'Shanghai', 'Hong_Kong', 'Singapore', 'Taipei')
 titles <- c('Girls\'_Generation', 'Kara_(South_Korean_band)', 'Wonder_Girls', 
@@ -97,18 +95,5 @@ ggplot(rtg, aes(x=date)) +
 #   ylab("Count in 10 days") +
 #   facet_grid(title ~.) +
 #   theme(axis.text.x = element_text(angle = 60, hjust = 1)) 
-#   
 
-# # heatmap
-# ggplot(rt, aes(x=date, y=0)) +
-#   stat_density(aes(fill = ..density..), geom = "raster", position = "identity") +
-#   scale_x_date(date_breaks = "1 month", date_labels = "%Y-%m") +
-#   theme(axis.text.x = element_text(angle = 60, hjust = 1))
 
-# density 
-# ggplot(rt,aes(x=month)) +
-#   stat_density(aes(ymax=..density.., ymin=-..density..),  alpha = 5/10,
-#                # geom='ribbon',
-#                fill='orange') +
-#   scale_x_date(date_breaks = "1 month", date_labels = "%Y-%m") +
-#   theme(axis.text.x = element_text(angle = 60, hjust = 1))
