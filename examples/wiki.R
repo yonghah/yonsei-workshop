@@ -42,13 +42,18 @@ getRevisionHistory <- function(title, lang){
 }
 
 # titles <- c('Seoul', 'Tokyo', 'Beijing', 'Shanghai', 'Hong_Kong', 'Singapore', 'Taipei')
-titles <- c('Girls\'_Generation', 'Kara_(South_Korean_band)', 'Wonder_Girls', 
-            '2NE1', 'F(x)_(band)', 'Secret_(South_Korean_band)',
-            'Sistar', 'Miss_A', 'Girl\'s_Day',
-            'AOA_(band)', 'EXID', 'Apink', 
-            'GFriend', 'Red_Velvet_(band)', 'Mamamoo', 'Twice_(band)',
-            'Lovelyz'
-            )
+# titles <- c('Girls\'_Generation', 'Kara_(South_Korean_band)', 'Wonder_Girls', 
+#             '2NE1', 'F(x)_(band)', 'Secret_(South_Korean_band)',
+#             'Sistar', 'Miss_A', 'Girl\'s_Day',
+#             'AOA_(band)', 'EXID', 'Apink', 
+#             'GFriend', 'Red_Velvet_(band)', 'Mamamoo', 'Twice_(band)',
+#             'Lovelyz'
+#             )
+
+titles <- c('FC_Barcelona', 'Real_Madrid_C.F.', 'Atlético_Madrid', 'FC_Bayern Munich', 
+            'Juventus_F.C.', 'Manchester_United_F.C.', 'Arsenal_F.C.', 'Manchester_City_F.C.', 'Chelsea F.C.', 'Liverpool_F.C.',
+            'Borussia_Dortmund', 'A.C._Milan', 'Tottenham_Hotspur_F.C.')
+
 datalist <- list()
 i <- 1
 for (title in titles) {
@@ -59,19 +64,23 @@ for (title in titles) {
 rt <- bind_rows(datalist)
 
 # horizontal chart
-bandh <- 30
+bandh <- 200
 rtg <- rt %>%
-  group_by(p=cut(date_posixct, "30 day"), title) %>%
+  group_by(p=cut(date_posixct, "1 month"), title) %>%
   summarise(count=n()) %>%
   mutate(level=count %/% bandh, 
          rem = count %% bandh,
          date = as.Date(p))
 
-alphaStep = 2 / max(rtg$level)
+max(rtg$count)
+max(rtg$level)
+
+alphaStep = 1 / (max(rtg$level) + 1)
 
 ggplot(rtg, aes(x=date)) +
-  geom_bar(aes(y=bandh, alpha=alphaStep*level), fill='darkred', stat='identity') +
-  geom_bar(aes(y=rem), alpha=alphaStep, fill='darkred', stat='identity') +
+  geom_bar(aes(y=bandh, alpha = level), fill='darkred', stat='identity') +
+  scale_alpha_continuous(range = c(alphaStep, 1)) +
+  geom_bar(aes(y=rem), alpha = min(1, alphaStep), fill='darkred', stat='identity') +
   scale_x_date(date_breaks = "3 month", date_labels = "%Y-%m") +
   ylab(NULL) +
   facet_grid(title ~.) +
