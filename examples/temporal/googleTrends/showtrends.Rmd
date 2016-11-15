@@ -42,4 +42,8 @@ p <- ggplot(df, aes(x=period, y=value, group=topic)) +
 p
 ```
 
-
+```{r}
+require(streamgraph)
+sdf <- filter(df, topic == '귤' | topic == "팥빙수" )
+streamgraph(sdf, "topic", "value", "period")
+```
