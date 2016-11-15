@@ -1,4 +1,3 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
+data/xls/*
+.DS_Store
+*.png

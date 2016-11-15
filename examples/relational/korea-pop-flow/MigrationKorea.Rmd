@@ -1,0 +1,51 @@
+---
+title: "한국의 인구 이동"
+output: html_notebook
+---
+
+## Get data from kosis
+
+http://kosis.kr/ups/ups_01List.jsp?pubcode=AD
+
+원하는 xlsx파일을 data/xls에 저장한 후 읽어들인다.
+
+```{r}
+require(readxl)
+xls_file <- "data/xls/2015년_030117.xlsx"
+xdf <- read_excel(xls_file)
+head(xdf)
+```
+
+전입지, 전출지, 계만 남기고 다른 컬럼들은 무시한다.
+전입지, 전출지중에서 시군구 레벨만 남긴다. 
+외부로의 이동만 포함
+
+```{r}
+df <- select(xdf, from=전입지, to=전출지, value=계) %>%
+  filter(from == '세종' | nchar(from)>2) %>%
+  filter(to == '세종' | nchar(to)>2) %>%
+  filter(from != to )
+
+head(df)
+```
+
+```{r}
+sdf <- filter(df, value>1000)
+require(circlize)
+par(family='Apple SD Gothic Neo')
+chordDiagram(sdf, annotationTrack = "grid",
+  preAllocateTracks = list(track.height = 0.3))
+
+# we go back to the first track and customize sector labels
+circos.trackPlotRegion(track.index = 1, panel.fun = function(x, y) {
+  xlim = get.cell.meta.data("xlim")
+  ylim = get.cell.meta.data("ylim")
+  sector.name = get.cell.meta.data("sector.index")
+  circos.text(mean(xlim), ylim[1], sector.name, facing = "clockwise",
+    niceFacing = TRUE, adj = c(0, 0.5))
+}, bg.border = NA) # here set bg.border to NA is important
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
