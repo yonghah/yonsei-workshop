@@ -1,0 +1,41 @@
+---
+title: "Naver Trends"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(httr)
+library(jsonlite)
+library(dplyr)
+
+pl <- list(qcType="N", 
+           queryGroups="귤__SZLIG__귤__OUML__팥빙수__SZLIG__팥빙수", 
+           startDate="20111101",
+           endDate="20161130");
+url <- "http://datalab.naver.com/ca/step1/process.naver"
+r <- POST(url, body = pl)
+res <- content(r)
+
+res$result[[1]]$title   # 귤
+res$result[[2]]$title   # 고구마
+
+processSeries <- function(sdata) {
+  title <- sdata$title
+  tdf <- do.call(rbind, 
+              lapply(sdata$data, 
+                     data.frame, 
+                     stringsAsFactors=FALSE))
+  tdf <- mutate(tdf, topic=title, period=as.Date(period, "%Y%m%d")) 
+  return(tdf)
+}
+df <- do.call(rbind, lapply(res$result, processSeries))
+
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
