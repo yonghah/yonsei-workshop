@@ -6,7 +6,6 @@ output: html_notebook
 
 ```{r}
 library(httr)
-library(jsonlite)
 library(dplyr)
 
 naverTrends <- function(words, start, end) {
@@ -51,6 +50,7 @@ theme_set(theme_gray(base_family='Apple SD Gothic Neo'))
 p <- ggplot(df, aes(x=period, y=value, group=topic)) + 
   geom_line(aes(color=topic))
 p
+
 ```
 
 ```{r}

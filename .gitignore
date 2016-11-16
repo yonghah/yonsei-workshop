@@ -1,3 +1,4 @@
 data/xls/*
 .DS_Store
 *.png
+*.nb.html
