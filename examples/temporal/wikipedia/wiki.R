@@ -93,6 +93,11 @@ ggplot(rtg, aes(x=date)) +
   
 
 # # histogram
+
+# ggplot(rt, aes(x=date)) +
+#   geom_histogram(binwidth=20) +
+#   facet_grid(title ~.) 
+  
 # ggplot(rt, aes(x=date)) + 
 #   geom_histogram(binwidth=10, alpha = 6/10, aes(y=..count..), fill="purple") +
 #   scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
