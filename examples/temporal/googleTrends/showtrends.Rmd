@@ -9,26 +9,37 @@ library(httr)
 library(jsonlite)
 library(dplyr)
 
-pl <- list(qcType="N", 
-           queryGroups="귤__SZLIG__귤__OUML__팥빙수__SZLIG__팥빙수__OUML__딸기__SZLIG__딸기", 
-           startDate="20111101",
-           endDate="20161130");
-url <- "http://datalab.naver.com/ca/step1/process.naver"
-r <- POST(url, body = pl)
-res <- content(r)
+naverTrends <- function(words, start, end) {
+  word_linked <- lapply(words, function(word) { paste(word, word, sep="__SZLIG__")})
+  queryText <- do.call(paste, c(word_linked, sep="__OUML__"))
+  pl <- list(qcType="N", 
+             queryGroups=queryText, 
+             startDate=start,
+             endDate=end);
+  url <- "http://datalab.naver.com/ca/step1/process.naver"
+  r <- POST(url, body = pl)
+  res <- content(r)
+  df <- do.call(rbind, lapply(res$result, processSeries))
+  return(df)
+}
 
 processSeries <- function(sdata) {
   title <- sdata$title
   tdf <- do.call(rbind, 
-              lapply(sdata$data, 
-                     data.frame, 
-                     stringsAsFactors=FALSE))
+                 lapply(sdata$data, 
+                        data.frame, 
+                        stringsAsFactors=FALSE))
   tdf <- mutate(tdf, topic=title, 
                 period=as.Date(period, "%Y%m%d"), 
                 value=as.numeric(value)) 
+  print(title)
   return(tdf)
 }
-df <- do.call(rbind, lapply(res$result, processSeries))
+
+words <- c("햄버거", "라면", "치킨", "피자")
+start <- "20080101"
+end <- "20161130"
+df <- naverTrends(words, start, end)
 
 ```
 
@@ -44,6 +55,32 @@ p
 
 ```{r}
 require(streamgraph)
-sdf <- filter(df, topic == '귤' | topic == "팥빙수" )
-streamgraph(sdf, "topic", "value", "period")
+
+streamgraph(df, "topic", "value", "period", interpolate="cardinal") %>% 
+  sg_axis_x(20, "period", "%Y") %>%
+  sg_fill_brewer("Dark2")
+```
+
+
+시간 단위가 '1주'이기 때문에 증감이 다소 뾰족하다. 이를 좀더 부드럽게 만들기 위해 '1개월' 단위로 합산해보자.
+
+```{r}
+require(lubridate)
+mdf <- mutate(df, yearmon = floor_date(period, unit = "month")) %>%
+  group_by(yearmon, topic) %>%
+  summarise(cnt=sum(value))
+```
+
+라인그래프
+
+```{r}
+p <- ggplot(mdf, aes(x=yearmon, y=cnt, group=topic)) + 
+  geom_line(aes(color=topic))
+p
+```
+
+```{r}
+streamgraph(mdf, "topic", "cnt", "yearmon", interpolate="cardinal") %>% 
+  sg_axis_x(20, "yearmon", "%Y") %>%
+  sg_fill_brewer("Dark2")
 ```
