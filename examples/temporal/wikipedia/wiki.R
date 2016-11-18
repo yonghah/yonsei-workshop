@@ -50,18 +50,22 @@ getRevisionHistory <- function(title, lang){
 #             'Lovelyz'
 #             )
 
-titles <- c('FC_Barcelona', 'Real_Madrid_C.F.', 'Atlético_Madrid', 'FC_Bayern Munich', 
-            'Juventus_F.C.', 'Manchester_United_F.C.', 'Arsenal_F.C.', 'Manchester_City_F.C.', 'Chelsea F.C.', 'Liverpool_F.C.',
-            'Borussia_Dortmund', 'A.C._Milan', 'Tottenham_Hotspur_F.C.')
+# titles <- c('FC_Barcelona', 'Real_Madrid_C.F.', 'Atlético_Madrid', 'FC_Bayern Munich', 
+#             'Juventus_F.C.', 'Manchester_United_F.C.', 'Arsenal_F.C.', 'Manchester_City_F.C.', 'Chelsea F.C.', 'Liverpool_F.C.',
+#             'Borussia_Dortmund', 'A.C._Milan', 'Tottenham_Hotspur_F.C.')
 
-datalist <- list()
-i <- 1
-for (title in titles) {
-  print(title)
-  datalist[[i]] <- getRevisionHistory(title, "en")
-  i <- i + 1
-}
-rt <- bind_rows(datalist)
+titles <- c('Girl\'s_Day', 'AOA_(band)')
+df <- do.call(rbind, lapply(titles, getRevisionHistory, lang="en"))
+
+
+# datalist <- list()
+# i <- 1
+# for (title in titles) {
+#   print(title)
+#   datalist[[i]] <- getRevisionHistory(title, "en")
+#   i <- i + 1
+# }
+# rt <- bind_rows(datalist)
 
 # horizontal chart
 bandh <- 200
