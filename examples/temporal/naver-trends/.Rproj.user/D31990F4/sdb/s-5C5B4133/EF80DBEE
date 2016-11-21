@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Naver Trends\"\noutput: html_notebook\n---\n\n\n```{r}\n# library(devtools)\n# install_github(\"yonghah/naveRtrends\")\ninstall.packages(\"extrafont\")\nlibrary(extrafont)\nfont_import()\npar(family='Malgun Gothic')\n```\n\n네이버 검색어의 인기가 시간에 따라 어떻게 변하는지 살펴보자.\n\n```{r}\nlibrary(naveRtrends)\nwords <- c(\"팥빙수\")\nstart <- \"20080101\"\nend <- \"20161130\"\ndf <- ntrends(words, start, end)\nhead(df)\n\n```\n\n```{r}\nlibrary(ggplot2)\nggplot(df, aes(x=period, y=value)) +\n  geom_bar(stat='identity', fill='#652799') \n\n```\n\n\n잉크를 아껴보자!\n\n```{r}\nggplot(df, aes(x=period, y=value)) +\n  geom_point(color=\"#943423\", size=0.1)\n```\n\n너무 아꼈다!\n\n```{r}\nggplot(df, aes(x=period, y=value)) +\n  geom_line(color=\"#943423\", size=0.5)\n```\n\n\n일주일 간격은 너무 조밀하다!\n```{r}\nlibrary(dplyr)\nmdf <- group_by(df, period=as.Date(cut(period, \"1 month\")), topic) %>%\n  summarise(value=sum(value))\nhead(mdf)\n```\n\n\n```{r}\nggplot(mdf, aes(x=period, y=value)) +\n  geom_bar(stat=\"identity\") \n```\n\n이번에는 복수의 검색어를 이용해보자.\n\n```{r}\nwords <- c(\"팥빙수\", \"귤\")\nstart <- \"20080101\"\nend <- \"20161130\"\ndf2 <- ntrends(words, start, end)\n```\n그래프를 그려보자\n\n```{r}\nggplot(df2, aes(x=period, y=value)) +\n  geom_point()\n```\n\n검색어별로 색깔을 다르게 주는게 좋겠군!\n\n```{r}\nggplot(df2, aes(x=period, y=value)) +\n  geom_point(aes(color=topic))\n```\n\n```{r}\nggplot(df2, aes(x=period, y=value)) +\n  geom_line(aes(color=topic))\n```\n\n여러 시리즈를 비교하는 다른 방법\n\n```{r}\nggplot(df2, aes(x=period, y=value)) +\n  geom_line(aes(color=topic)) +\n  facet_grid(topic~.)\n```\n\n이번에도 한달 단위로 묶어봅시다.\n```{r}\nmdf2 <- group_by(df2, period=as.Date(cut(period, \"1 month\")), topic) %>%\n  summarise(value=sum(value))\n```\n\n```{r}\nggplot(mdf2, aes(x=period, y=value)) +\n  geom_bar(stat=\"identity\", aes(fill=topic)) +\n  facet_grid(topic~.)\n```\n\n```{r}\nggplot(mdf2, aes(x=period, y=value)) +\n  geom_bar(stat=\"identity\", aes(fill=topic), position=\"dodge\")   # fill, stack, dodge\n  \n```\n\n\n\n```{r}\nwords <- c(\"러블리즈\", \"여자친구\", \"마마무\", \"레드벨벳\", \"트와이스\")\nstart <- \"20140101\"\nend <- \"20161130\"\nbdf <- ntrends(words, start, end)\nhead(bdf)\n```\n\n라인 그래프를 그려보자\n\n```{r}\n\nggplot(bdf, aes(x=period, y=value, group=topic)) + \n  geom_line(aes(color=topic))\n\n```\n\n```{r}\nrequire(streamgraph)\n\nmbdf <- group_by(bdf, period=as.Date(cut(period, \"1 month\")), topic) %>%\n  summarise(value=sum(value))\n\nstreamgraph(mbdf, \"topic\", \"value\", \"period\", interpolate=\"cardinal\") %>% \n  sg_axis_x(20, \"period\", \"%Y\") %>%\n  sg_fill_brewer(\"Dark2\")\n```\n\n\n```{r}\nwbdf2 <- group_by(bdf, period=as.Date(cut(period, \"2 week\")), topic) %>%\n  summarise(value=sum(value))\n\nggplot(wbdf2, aes(x=period, y=value)) +\n  geom_bar(stat=\"identity\", aes(fill=topic)) +\n  facet_grid(topic~.)\n```\n ",
+    "created" : 1479759877517.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4057833252",
+    "id" : "EF80DBEE",
+    "lastKnownWriteTime" : 1479762222,
+    "last_content_update" : 1479762222565,
+    "path" : "C:/WORK/repo/yonsei-workshop/examples/temporal/naver-trends/showtrends.Rmd",
+    "project_path" : "showtrends.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

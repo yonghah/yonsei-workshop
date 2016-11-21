@@ -1,0 +1,885 @@
+"0","font_import()
+y
+"
+"2","Scanning ttf files in C:\Windows\Fonts ...
+"
+"2","Extracting .afm files from .ttf files...
+"
+"2","C:\Windows\Fonts\AcadEref.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/AcadEref
+"
+"2","C:\Windows\Fonts\AGENCYB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/AGENCYB
+"
+"2","C:\Windows\Fonts\AGENCYR.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/AGENCYR
+"
+"2","C:\Windows\Fonts\ahronbd.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ahronbd
+"
+"2","C:\Windows\Fonts\AIGDT___.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/AIGDT___
+"
+"2","C:\Windows\Fonts\ALGER.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ALGER
+"
+"2","C:\Windows\Fonts\AMDT_Symbols.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/AMDT_Symbols
+"
+"2","C:\Windows\Fonts\AMGDT___.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/AMGDT___
+"
+"2","C:\Windows\Fonts\andlso.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/andlso
+"
+"2","C:\Windows\Fonts\angsa.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/angsa
+"
+"2","C:\Windows\Fonts\angsab.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/angsab
+"
+"2","C:\Windows\Fonts\angsai.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/angsai
+"
+"2","C:\Windows\Fonts\angsau.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/angsau
+"
+"2","C:\Windows\Fonts\angsaub.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/angsaub
+"
+"2","C:\Windows\Fonts\angsaui.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/angsaui
+"
+"2","C:\Windows\Fonts\angsauz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/angsauz
+"
+"2","C:\Windows\Fonts\angsaz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/angsaz
+"
+"2","C:\Windows\Fonts\ANTQUAB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ANTQUAB
+"
+"2","C:\Windows\Fonts\ANTQUABI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ANTQUABI
+"
+"2","C:\Windows\Fonts\ANTQUAI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ANTQUAI
+"
+"2","C:\Windows\Fonts\aparaj.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/aparaj
+"
+"2","C:\Windows\Fonts\aparajb.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/aparajb
+"
+"2","C:\Windows\Fonts\aparajbi.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/aparajbi
+"
+"2","C:\Windows\Fonts\aparaji.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/aparaji
+"
+"2","C:\Windows\Fonts\arabtype.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/arabtype
+"
+"2","C:\Windows\Fonts\arial.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/arial
+"
+"2","C:\Windows\Fonts\arialbd.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/arialbd
+"
+"2","C:\Windows\Fonts\arialbi.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/arialbi
+"
+"2","C:\Windows\Fonts\ariali.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ariali
+"
+"2","C:\Windows\Fonts\ARIALN.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ARIALN
+"
+"2","C:\Windows\Fonts\ARIALNB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ARIALNB
+"
+"2","C:\Windows\Fonts\ARIALNBI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ARIALNBI
+"
+"2","C:\Windows\Fonts\ARIALNI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ARIALNI
+"
+"2","C:\Windows\Fonts\ARIALUNI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ARIALUNI
+"
+"2","C:\Windows\Fonts\ariblk.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ariblk
+"
+"2","C:\Windows\Fonts\ARLRDBD.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ARLRDBD
+"
+"2","C:\Windows\Fonts\BASKVILL.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BASKVILL
+"
+"2","C:\Windows\Fonts\BAUHS93.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BAUHS93
+"
+"2","C:\Windows\Fonts\BELL.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BELL
+"
+"2","C:\Windows\Fonts\BELLB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BELLB
+"
+"2","C:\Windows\Fonts\BELLI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BELLI
+"
+"2","C:\Windows\Fonts\BERNHC.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BERNHC
+"
+"2","C:\Windows\Fonts\bgothl.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/bgothl
+"
+"2","C:\Windows\Fonts\bgothm.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/bgothm
+"
+"2","C:\Windows\Fonts\BKANT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BKANT
+"
+"2","C:\Windows\Fonts\BOD_B.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_B
+"
+"2","C:\Windows\Fonts\BOD_BI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_BI
+"
+"2","C:\Windows\Fonts\BOD_BLAI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_BLAI
+"
+"2","C:\Windows\Fonts\BOD_BLAR.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_BLAR
+"
+"2","C:\Windows\Fonts\BOD_CB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_CB
+"
+"2","C:\Windows\Fonts\BOD_CBI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_CBI
+"
+"2","C:\Windows\Fonts\BOD_CI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_CI
+"
+"2","C:\Windows\Fonts\BOD_CR.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_CR
+"
+"2","C:\Windows\Fonts\BOD_I.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_I
+"
+"2","C:\Windows\Fonts\BOD_PSTC.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_PSTC
+"
+"2","C:\Windows\Fonts\BOD_R.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOD_R
+"
+"2","C:\Windows\Fonts\BOOKOS.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOOKOS
+"
+"2","C:\Windows\Fonts\BOOKOSB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOOKOSB
+"
+"2","C:\Windows\Fonts\BOOKOSBI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOOKOSBI
+"
+"2","C:\Windows\Fonts\BOOKOSI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BOOKOSI
+"
+"2","C:\Windows\Fonts\BRADHITC.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BRADHITC
+"
+"2","C:\Windows\Fonts\BRITANIC.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BRITANIC
+"
+"2","C:\Windows\Fonts\BRLNSB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BRLNSB
+"
+"2","C:\Windows\Fonts\BRLNSDB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BRLNSDB
+"
+"2","C:\Windows\Fonts\BRLNSR.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BRLNSR
+"
+"2","C:\Windows\Fonts\BROADW.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BROADW
+"
+"2","C:\Windows\Fonts\browa.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/browa
+"
+"2","C:\Windows\Fonts\browab.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/browab
+"
+"2","C:\Windows\Fonts\browai.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/browai
+"
+"2","C:\Windows\Fonts\browau.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/browau
+"
+"2","C:\Windows\Fonts\browaub.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/browaub
+"
+"2","C:\Windows\Fonts\browaui.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/browaui
+"
+"2","C:\Windows\Fonts\browauz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/browauz
+"
+"2","C:\Windows\Fonts\browaz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/browaz
+"
+"2","C:\Windows\Fonts\BRUSHSCI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BRUSHSCI
+"
+"2","C:\Windows\Fonts\BSSYM7.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BSSYM7
+"
+"2","C:\Windows\Fonts\BuxtonSketch.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/BuxtonSketch
+"
+"2","C:\Windows\Fonts\calibri.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/calibri
+"
+"2","C:\Windows\Fonts\calibrib.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/calibrib
+"
+"2","C:\Windows\Fonts\calibrii.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/calibrii
+"
+"2","C:\Windows\Fonts\calibril.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/calibril
+"
+"2","C:\Windows\Fonts\calibrili.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/calibrili
+"
+"2","C:\Windows\Fonts\calibriz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/calibriz
+"
+"2","C:\Windows\Fonts\CALIFB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CALIFB
+"
+"2","C:\Windows\Fonts\CALIFI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CALIFI
+"
+"2","C:\Windows\Fonts\CALIFR.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CALIFR
+"
+"2","C:\Windows\Fonts\CALIST.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CALIST
+"
+"2","C:\Windows\Fonts\CALISTB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CALISTB
+"
+"2","C:\Windows\Fonts\CALISTBI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CALISTBI
+"
+"2","C:\Windows\Fonts\CALISTI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CALISTI
+"
+"2","C:\Windows\Fonts\cambriab.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cambriab
+"
+"2","C:\Windows\Fonts\cambriai.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cambriai
+"
+"2","C:\Windows\Fonts\cambriaz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cambriaz
+"
+"2","C:\Windows\Fonts\Candara.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/Candara
+"
+"2","C:\Windows\Fonts\Candarab.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/Candarab
+"
+"2","C:\Windows\Fonts\Candarai.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/Candarai
+"
+"2","C:\Windows\Fonts\Candaraz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/Candaraz
+"
+"2","C:\Windows\Fonts\CASTELAR.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CASTELAR
+"
+"2","C:\Windows\Fonts\CENSCBK.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CENSCBK
+"
+"2","C:\Windows\Fonts\CENTAUR.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CENTAUR
+"
+"2","C:\Windows\Fonts\CENTURY.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CENTURY
+"
+"2","C:\Windows\Fonts\CHILLER.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CHILLER
+"
+"2","C:\Windows\Fonts\cityb___.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cityb___
+"
+"2","C:\Windows\Fonts\COLONNA.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/COLONNA
+"
+"2","C:\Windows\Fonts\comic.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/comic
+"
+"2","C:\Windows\Fonts\comicbd.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/comicbd
+"
+"2","C:\Windows\Fonts\compi.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/compi
+"
+"2","C:\Windows\Fonts\complex_.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/complex_
+"
+"2","C:\Windows\Fonts\comsc.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/comsc
+"
+"2","C:\Windows\Fonts\consola.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/consola
+"
+"2","C:\Windows\Fonts\consolab.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/consolab
+"
+"2","C:\Windows\Fonts\consolai.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/consolai
+"
+"2","C:\Windows\Fonts\consolaz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/consolaz
+"
+"2","C:\Windows\Fonts\constan.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/constan
+"
+"2","C:\Windows\Fonts\constanb.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/constanb
+"
+"2","C:\Windows\Fonts\constani.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/constani
+"
+"2","C:\Windows\Fonts\constanz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/constanz
+"
+"2","C:\Windows\Fonts\COOPBL.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/COOPBL
+"
+"2","C:\Windows\Fonts\COPRGTB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/COPRGTB
+"
+"2","C:\Windows\Fonts\COPRGTL.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/COPRGTL
+"
+"2","C:\Windows\Fonts\corbel.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/corbel
+"
+"2","C:\Windows\Fonts\corbelb.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/corbelb
+"
+"2","C:\Windows\Fonts\corbeli.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/corbeli
+"
+"2","C:\Windows\Fonts\corbelz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/corbelz
+"
+"2","C:\Windows\Fonts\cordia.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cordia
+"
+"2","C:\Windows\Fonts\cordiab.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cordiab
+"
+"2","C:\Windows\Fonts\cordiai.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cordiai
+"
+"2","C:\Windows\Fonts\cordiau.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cordiau
+"
+"2","C:\Windows\Fonts\cordiaub.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cordiaub
+"
+"2","C:\Windows\Fonts\cordiaui.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cordiaui
+"
+"2","C:\Windows\Fonts\cordiauz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cordiauz
+"
+"2","C:\Windows\Fonts\cordiaz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cordiaz
+"
+"2","C:\Windows\Fonts\counb___.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/counb___
+"
+"2","C:\Windows\Fonts\cour.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/cour
+"
+"2","C:\Windows\Fonts\courbd.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/courbd
+"
+"2","C:\Windows\Fonts\courbi.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/courbi
+"
+"2","C:\Windows\Fonts\couri.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/couri
+"
+"2","C:\Windows\Fonts\CURLZ___.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/CURLZ___
+"
+"2","C:\Windows\Fonts\daunpenh.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/daunpenh
+"
+"2","C:\Windows\Fonts\david.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/david
+"
+"2","C:\Windows\Fonts\davidbd.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/davidbd
+"
+"2","C:\Windows\Fonts\DengXian.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/DengXian
+"
+"2","C:\Windows\Fonts\dokchamp.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/dokchamp
+"
+"2","C:\Windows\Fonts\dutch.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/dutch
+"
+"2","C:\Windows\Fonts\dutchb.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/dutchb
+"
+"2","C:\Windows\Fonts\dutchbi.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/dutchbi
+"
+"2","C:\Windows\Fonts\dutcheb.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/dutcheb
+"
+"2","C:\Windows\Fonts\dutchi.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/dutchi
+"
+"2","C:\Windows\Fonts\ebrima.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ebrima
+"
+"2","C:\Windows\Fonts\ebrimabd.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ebrimabd
+"
+"2","C:\Windows\Fonts\ELEPHNT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ELEPHNT
+"
+"2","C:\Windows\Fonts\ELEPHNTI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ELEPHNTI
+"
+"2","C:\Windows\Fonts\ENGR.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ENGR
+"
+"2","C:\Windows\Fonts\ERASBD.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ERASBD
+"
+"2","C:\Windows\Fonts\ERASDEMI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ERASDEMI
+"
+"2","C:\Windows\Fonts\ERASLGHT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ERASLGHT
+"
+"2","C:\Windows\Fonts\ERASMD.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/ERASMD
+"
+"2","C:\Windows\Fonts\esri_1.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_1
+"
+"2","C:\Windows\Fonts\esri_105.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_105
+"
+"2","C:\Windows\Fonts\esri_11.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_11
+"
+"2","C:\Windows\Fonts\esri_12.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_12
+"
+"2","C:\Windows\Fonts\esri_121.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_121
+"
+"2","C:\Windows\Fonts\esri_13.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_13
+"
+"2","C:\Windows\Fonts\esri_130.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_130
+"
+"2","C:\Windows\Fonts\esri_131.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_131
+"
+"2","C:\Windows\Fonts\esri_132.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_132
+"
+"2","C:\Windows\Fonts\esri_133.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_133
+"
+"2","C:\Windows\Fonts\esri_14.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_14
+"
+"2","C:\Windows\Fonts\esri_144.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_144
+"
+"2","C:\Windows\Fonts\esri_149.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_149
+"
+"2","C:\Windows\Fonts\esri_15.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_15
+"
+"2","C:\Windows\Fonts\esri_150.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_150
+"
+"2","C:\Windows\Fonts\esri_151.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_151
+"
+"2","C:\Windows\Fonts\esri_152.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_152
+"
+"2","C:\Windows\Fonts\esri_153.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_153
+"
+"2","C:\Windows\Fonts\esri_159.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_159
+"
+"2","C:\Windows\Fonts\esri_16.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_16
+"
+"2","C:\Windows\Fonts\esri_160.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_160
+"
+"2","C:\Windows\Fonts\esri_161.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_161
+"
+"2","C:\Windows\Fonts\esri_17.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_17
+"
+"2","C:\Windows\Fonts\esri_19.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_19
+"
+"2","C:\Windows\Fonts\esri_2.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_2
+"
+"2","C:\Windows\Fonts\esri_20.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_20
+"
+"2","C:\Windows\Fonts\esri_21.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_21
+"
+"2","C:\Windows\Fonts\esri_216.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_216
+"
+"2","C:\Windows\Fonts\esri_22.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_22
+"
+"2","C:\Windows\Fonts\esri_220.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_220
+"
+"2","C:\Windows\Fonts\esri_221.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_221
+"
+"2","C:\Windows\Fonts\esri_222.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_222
+"
+"2","C:\Windows\Fonts\esri_223.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_223
+"
+"2","C:\Windows\Fonts\esri_224.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_224
+"
+"2","C:\Windows\Fonts\esri_225.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_225
+"
+"2","C:\Windows\Fonts\esri_23.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_23
+"
+"2","C:\Windows\Fonts\esri_24.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_24
+"
+"2","C:\Windows\Fonts\esri_25.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_25
+"
+"2","C:\Windows\Fonts\esri_26.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_26
+"
+"2","C:\Windows\Fonts\esri_27Mcr_2.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_27Mcr_2
+"
+"2","C:\Windows\Fonts\esri_29.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_29
+"
+"2","C:\Windows\Fonts\esri_3.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_3
+"
+"2","C:\Windows\Fonts\esri_30s.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_30s
+"
+"2","C:\Windows\Fonts\esri_33.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_33
+"
+"2","C:\Windows\Fonts\esri_34.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_34
+"
+"2","C:\Windows\Fonts\esri_375.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_375
+"
+"2","C:\Windows\Fonts\esri_376.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_376
+"
+"2","C:\Windows\Fonts\esri_377.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_377
+"
+"2","C:\Windows\Fonts\esri_39.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_39
+"
+"2","C:\Windows\Fonts\esri_4.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_4
+"
+"2","C:\Windows\Fonts\esri_40.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_40
+"
+"2","C:\Windows\Fonts\esri_400.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_400
+"
+"2","C:\Windows\Fonts\esri_405.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_405
+"
+"2","C:\Windows\Fonts\esri_406.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_406
+"
+"2","C:\Windows\Fonts\esri_44.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_44
+"
+"2","C:\Windows\Fonts\esri_47.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_47
+"
+"2","C:\Windows\Fonts\esri_48.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_48
+"
+"2","C:\Windows\Fonts\esri_49.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_49
+"
+"2","C:\Windows\Fonts\esri_5.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_5
+"
+"2","C:\Windows\Fonts\esri_500.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_500
+"
+"2","C:\Windows\Fonts\esri_651.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_651
+"
+"2","C:\Windows\Fonts\esri_652.ttf"
+"2","running command '""C:/Users/yonghah/R/win-library/3.3/Rttf2pt1/exec/ttf2pt1.exe"" -a -G fAe ""C:\Windows\Fonts\esri_652.ttf"" ""C:\Users\yonghah\AppData\Local\Temp\RtmpOkU5fg/fonts/esri_652""' had status 5"
+"2"," : No FontName. Skipping.
+"
+"2","C:\Windows\Fonts\esri_7.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_7
+"
+"2","C:\Windows\Fonts\esri_730.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_730
+"
+"2","C:\Windows\Fonts\esri_8.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_8
+"
+"2","C:\Windows\Fonts\esri_800.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_800
+"
+"2","C:\Windows\Fonts\esri_801.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_801
+"
+"2","C:\Windows\Fonts\esri_802.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_802
+"
+"2","C:\Windows\Fonts\esri_803.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_803
+"
+"2","C:\Windows\Fonts\esri_804.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_804
+"
+"2","C:\Windows\Fonts\esri_832.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_832
+"
+"2","C:\Windows\Fonts\esri_837.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_837
+"
+"2","C:\Windows\Fonts\esri_9.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/esri_9
+"
+"2","C:\Windows\Fonts\estre.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/estre
+"
+"2","C:\Windows\Fonts\euphemia.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/euphemia
+"
+"2","C:\Windows\Fonts\eurr____.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/eurr____
+"
+"2","C:\Windows\Fonts\eurro___.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/eurro___
+"
+"2","C:\Windows\Fonts\FELIXTI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FELIXTI
+"
+"2","C:\Windows\Fonts\FORTE.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FORTE
+"
+"2","C:\Windows\Fonts\FRABK.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FRABK
+"
+"2","C:\Windows\Fonts\FRABKIT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FRABKIT
+"
+"2","C:\Windows\Fonts\FRADM.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FRADM
+"
+"2","C:\Windows\Fonts\FRADMCN.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FRADMCN
+"
+"2","C:\Windows\Fonts\FRADMIT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FRADMIT
+"
+"2","C:\Windows\Fonts\FRAHV.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FRAHV
+"
+"2","C:\Windows\Fonts\FRAHVIT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FRAHVIT
+"
+"2","C:\Windows\Fonts\framd.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/framd
+"
+"2","C:\Windows\Fonts\FRAMDCN.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FRAMDCN
+"
+"2","C:\Windows\Fonts\framdit.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/framdit
+"
+"2","C:\Windows\Fonts\frank.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/frank
+"
+"2","C:\Windows\Fonts\FREESCPT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FREESCPT
+"
+"2","C:\Windows\Fonts\FRSCRIPT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FRSCRIPT
+"
+"2","C:\Windows\Fonts\FTLTLT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/FTLTLT
+"
+"2","C:\Windows\Fonts\Gabriola.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/Gabriola
+"
+"2","C:\Windows\Fonts\GADUGI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GADUGI
+"
+"2","C:\Windows\Fonts\GADUGIB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GADUGIB
+"
+"2","C:\Windows\Fonts\GARA.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GARA
+"
+"2","C:\Windows\Fonts\GARABD.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GARABD
+"
+"2","C:\Windows\Fonts\GARAIT.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GARAIT
+"
+"2","C:\Windows\Fonts\gautami.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/gautami
+"
+"2","C:\Windows\Fonts\gautamib.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/gautamib
+"
+"2","C:\Windows\Fonts\gdt_____.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/gdt_____
+"
+"2","C:\Windows\Fonts\GENISO.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GENISO
+"
+"2","C:\Windows\Fonts\georgia.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/georgia
+"
+"2","C:\Windows\Fonts\georgiab.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/georgiab
+"
+"2","C:\Windows\Fonts\georgiai.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/georgiai
+"
+"2","C:\Windows\Fonts\georgiaz.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/georgiaz
+"
+"2","C:\Windows\Fonts\GIGI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GIGI
+"
+"2","C:\Windows\Fonts\GIL_____.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GIL_____
+"
+"2","C:\Windows\Fonts\GILB____.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GILB____
+"
+"2","C:\Windows\Fonts\GILBI___.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GILBI___
+"
+"2","C:\Windows\Fonts\GILC____.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GILC____
+"
+"2","C:\Windows\Fonts\GILI____.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GILI____
+"
+"2","C:\Windows\Fonts\GILLUBCD.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GILLUBCD
+"
+"2","C:\Windows\Fonts\GILSANUB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GILSANUB
+"
+"2","C:\Windows\Fonts\gisha.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/gisha
+"
+"2","C:\Windows\Fonts\gishabd.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/gishabd
+"
+"2","C:\Windows\Fonts\GLECB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GLECB
+"
+"2","C:\Windows\Fonts\GLSNECB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GLSNECB
+"
+"2","C:\Windows\Fonts\GOST_Common Italic.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOST_Common Italic
+"
+"2","C:\Windows\Fonts\GOST_Common.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOST_Common
+"
+"2","C:\Windows\Fonts\GOTHIC.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOTHIC
+"
+"2","C:\Windows\Fonts\GOTHICB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOTHICB
+"
+"2","C:\Windows\Fonts\GOTHICBI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOTHICBI
+"
+"2","C:\Windows\Fonts\gothice_.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/gothice_
+"
+"2","C:\Windows\Fonts\gothicg_.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/gothicg_
+"
+"2","C:\Windows\Fonts\GOTHICI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOTHICI
+"
+"2","C:\Windows\Fonts\gothici_.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/gothici_
+"
+"2","C:\Windows\Fonts\GOUDOS.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOUDOS
+"
+"2","C:\Windows\Fonts\GOUDOSB.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOUDOSB
+"
+"2","C:\Windows\Fonts\GOUDOSI.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOUDOSI
+"
+"2","C:\Windows\Fonts\GOUDYSTO.TTF"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/GOUDYSTO
+"
+"2","C:\Windows\Fonts\greekc__.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/greekc__
+"
+"2","C:\Windows\Fonts\greeks__.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/greeks__
+"
+"2","C:\Windows\Fonts\HANBatang.ttf"
+"2"," => C:/Users/yonghah/R/win-library/3.3/extrafontdb/metrics/HANBatang
+"
+"2","C:\Windows\Fonts\HANDotum.ttf"

@@ -1,0 +1,3 @@
+"0","ggplot(mdf2, aes(x=period, y=value)) +"
+"0","  geom_bar(stat=""identity"", aes(fill=topic)) +"
+"0","  facet_grid(topic~.)"

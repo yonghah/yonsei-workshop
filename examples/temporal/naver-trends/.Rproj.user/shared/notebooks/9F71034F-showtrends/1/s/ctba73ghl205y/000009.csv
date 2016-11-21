@@ -1,0 +1,6 @@
+"0","library(naveRtrends)"
+"0","words <- c(""팥빙수"")"
+"0","start <- ""20080101"""
+"0","end <- ""20161130"""
+"0","df <- ntrends(words, start, end)"
+"0","head(df)"
