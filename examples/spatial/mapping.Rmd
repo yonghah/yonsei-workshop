@@ -1,0 +1,152 @@
+---
+title: "Mapping exercise"
+output: html_notebook
+---
+
+우선 데이터를 가져옵시다. 우리나라에 병원들이 어디에 있는지 궁금합니다.
+공공보건포털의 정보를 이용합시다.
+http://www.g-health.kr/
+
+여기 데이터를 가져올 겁니다. 
+
+```{r}
+# devtools::install_github("yonghah/healthInstKr")
+library(healthInstKr)
+library(dplyr)
+library(httr)
+df_bogeonso <- get_health_inst(71)
+```
+
+데이터를 살펴봅시다. 위도와 경도가 있습니다. 이걸 이용해서 위치를 찍어볼겁니다.
+
+```{r}
+head(df_bogeonso)
+```
+
+
+
+우선 지도를 불러와봅시다.
+```{r}
+library(leaflet)
+m <- leaflet() %>% 
+  # addTiles() %>% 
+  addProviderTiles("Stamen.Watercolor") %>%
+  setView(lng = 127.5, lat = 36, zoom = 7)
+m
+```
+
+마커를 더해봅시다.
+
+```{r fig.width=10, fig.height=10}
+addMarkers(m, 
+           lng = df_bogeonso$x_pos, 
+           lat=df_bogeonso$y_pos, 
+           popup = df_bogeonso$yadm_nm)
+```
+
+나는 마커가 싫어요!
+```{r}
+addCircleMarkers(m, lng = df_bogeonso$x_pos, lat=df_bogeonso$y_pos, 
+                 radius = 2,
+                 color="red",
+                 stroke = FALSE, 
+                 fillOpacity = 0.6)
+```
+
+자 이제 보로노이 다이어그램을 그려봅시다.
+그게 뭔가요.
+
+https://www.google.com/search?q=voronoi+tessellation&hl=en&biw=1280&bih=726&site=webhp&source=lnms&tbm=isch&sa=X&sqi=2&ved=0ahUKEwievYbCxL_QAhUB3IMKHX6fDdcQ_AUIBigB
+
+```{r}
+library(sp)
+library(deldir)
+# function getting voronoi polygon dataframe
+df_to_voronoi_polygon <- function(df) {
+  
+  vor_data <- df %>% select(x_pos, y_pos)
+  sp <- SpatialPointsDataFrame(cbind(vor_data$x_pos,
+                                     vor_data$y_pos),
+                               vor_data, match.ID=TRUE)
+  vor_desc <- tile.list(deldir(sp@coords[,1], sp@coords[,2]))
+  lapply(1:(length(vor_desc)), function(i) {
+    tmp <- cbind(vor_desc[[i]]$x, vor_desc[[i]]$y)
+    tmp <- rbind(tmp, tmp[1,])
+    Polygons(list(Polygon(tmp)), ID=i)
+  }) -> vor_polygons
+  
+  raw_gons <- SpatialPolygons(vor_polygons)
+  pid <- sapply(slot(raw_gons, "polygons"), function(x) slot(x, "ID"))
+  p.df <- data.frame( ID=1:length(raw_gons), row.names = pid)    
+  vor.spdf<-SpatialPolygonsDataFrame(raw_gons, data=p.df)
+  return(vor.spdf)
+}
+```
+
+
+```{r}
+
+df <- df_bogeonso %>%
+  filter(x_pos != '') %>%
+  filter(y_pos != '') %>%
+  mutate(x_pos = as.numeric(x_pos), y_pos = as.numeric(y_pos))
+
+spdf <- df_to_voronoi_polygon(df)
+addPolygons(m, data=spdf,
+            stroke=TRUE, color="#3322FF", weight=2,
+            fill=TRUE, fillOpacity = 0.0,
+            smoothFactor=0.5)
+```
+
+
+그런데 voronoi polygon들이 해안선을 따라서 클립되었으면 좋겠군요!
+
+```{r}
+
+library(rgeos)
+
+df_to_voronoi_polygon <- function(df, boundary) {
+  
+  vor_data <- df %>% select(x_pos, y_pos)
+  sp <- SpatialPointsDataFrame(cbind(vor_data$x_pos,
+                                     vor_data$y_pos),
+                               vor_data, match.ID=TRUE)
+  vor_desc <- tile.list(deldir(sp@coords[,1], sp@coords[,2]))
+  lapply(1:(length(vor_desc)), function(i) {
+    tmp <- cbind(vor_desc[[i]]$x, vor_desc[[i]]$y)
+    tmp <- rbind(tmp, tmp[1,])
+    Polygons(list(Polygon(tmp)), ID=i)
+  }) -> vor_polygons
+  
+  raw_gons <- SpatialPolygons(vor_polygons)
+  
+  # clip voronoi polygons
+  vor_gons <- gIntersection(boundary, raw_gons, byid=TRUE)
+  
+  pid <- sapply(slot(vor_gons, "polygons"), function(x) slot(x, "ID"))
+  p.df <- data.frame( ID=1:length(vor_gons), row.names = pid)    
+  
+  vor.spdf<-SpatialPolygonsDataFrame(vor_gons, data=p.df)
+  return(vor.spdf)
+}
+```
+
+해볼까요.
+
+```{r}
+library(mapdata)
+library(maps)
+library(maptools)
+
+korea <- map("world2Hires", "South Korea", fill=TRUE, plot=FALSE)
+korea_gon <- map2SpatialPolygons(korea, sub(":.*$", "", korea$names))
+
+spdf <- df_to_voronoi_polygon(df, korea_gon)
+addPolygons(m, data=spdf,
+            stroke=TRUE, color="#3322FF", weight=2,
+            fill=TRUE, fillOpacity = 0.0,
+            smoothFactor=0.5)
+```
+
+
+

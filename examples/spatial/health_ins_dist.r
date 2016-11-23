@@ -17,10 +17,26 @@ library(ggplot2)
 url <- "http://www.g-health.kr/portal/health/pubHealthSearch/get_list.do"
 
 # 보건기관 코드에 따라 데이터 가져오기
+
+#    cl_cd   cl_cd_nm
+# 1      1   상급종합
+# 2     11   종합병원
+# 3     21       병원
+# 4     28   요양병원
+# 5     31       의원
+# 6     41   치과병원
+# 7     51   치과의원
+# 8     61     조산원
+# 9     71     보건소
+# 10    72   보건지소
+# 11    73 보건진료소
+# 12    75 보건의료원
+# 13    81       약국
+# 14    92   한방병원
+# 15    93     한의원
+# if code is '' collect all datat
 getMedIns <- function(code) {
-  # code 71, 72, 73 Bogeonso
-  # code 81 Pharmacy
-  pl <- list(cl_cd=code, rows=30000, cpage=1)
+  pl <- list(cl_cd=code, rows=130000, cpage=1)
   r <- POST(url, 
             body = pl, 
             add_headers(

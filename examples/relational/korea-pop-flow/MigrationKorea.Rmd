@@ -6,7 +6,9 @@ output: html_notebook
 ## Get data from kosis
 
 http://kosis.kr/ups/ups_01List.jsp?pubcode=AD
-
+or
+http://kosis.kr/upsHtml/online.do?isOnline=Y&PART=G&pubcode=AD
+http://kosis.kr/upsHtml/online/downSrvcFile.do?PUBCODE=AD&SEQ=2959&FILE_NAME=030117.xlsx
 원하는 xlsx파일을 data/xls에 저장한 후 읽어들인다.
 
 ```{r}
@@ -14,6 +16,7 @@ require(readxl)
 xls_file <- "data/xls/2015년_030117.xlsx"
 xdf <- read_excel(xls_file)
 head(xdf)
+colnames(xdf)
 ```
 
 전입지, 전출지, 계만 남기고 다른 컬럼들은 무시한다.
@@ -21,7 +24,7 @@ head(xdf)
 외부로의 이동만 포함
 
 ```{r}
-df <- select(xdf, from=전입지, to=전출지, value=계) %>%
+df <- select_(xdf, from="전입지", to="전출지", value="계", mvalue=21, fvalue=39) %>%
   filter(from == '세종' | nchar(from)>2) %>%
   filter(to == '세종' | nchar(to)>2) %>%
   filter(from != to )
@@ -29,8 +32,26 @@ df <- select(xdf, from=전입지, to=전출지, value=계) %>%
 head(df)
 ```
 
+제일많이 빠져나간 곳은 어딜까?
+
+```{r}
+df <- arrange(df, desc(value))  
+head(df)
+```
+
 ```{r}
 sdf <- filter(df, value>1000)
+ggplot(sdf, aes(value)) + geom_histogram(binwidth=500)
+```
+
+남녀간 이동의 차이
+```{r}
+ggplot(df, aes(mvalue - fvalue)) + geom_histogram(binwidth=5) +ylim(c(0,1000))
+mean(df$mvalue-df$fvalue)
+```
+
+```{r fig.height=10, fig.width=10}
+sdf <- filter(df, value>2000) %>% arrange(from)
 require(circlize)
 par(family='Apple SD Gothic Neo')
 chordDiagram(sdf, annotationTrack = "grid",
@@ -46,6 +67,25 @@ circos.trackPlotRegion(track.index = 1, panel.fun = function(x, y) {
 }, bg.border = NA) # here set bg.border to NA is important
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+네트워크로 표현해볼까.
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
+```{r}
+library(igraph)
+ndf <- filter(df, value>1000) %>% arrange(from)
+g <- graph_from_data_frame(ndf)
+```
+
+그려보자
+
+```{r fig.height=20, fig.width=20}
+par(family='Apple SD Gothic Neo')
+edgeScale = 0.002
+plot(g, vertex.size=2, 
+     vertex.label.family='Apple SD Gothic Neo', vertex.label.cex=2,
+     edge.width = E(g)$value * edgeScale, edge.arrow.size=E(g)$value * edgeScale * 0.4,
+     edge.color = rgb(0.2,0.2,0.2,.2))
+```
+
+
+
+

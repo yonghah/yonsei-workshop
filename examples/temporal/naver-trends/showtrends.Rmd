@@ -7,10 +7,6 @@ output: html_notebook
 ```{r}
 # library(devtools)
 # install_github("yonghah/naveRtrends")
-install.packages("extrafont")
-library(extrafont)
-font_import()
-par(family='Malgun Gothic')
 ```
 
 네이버 검색어의 인기가 시간에 따라 어떻게 변하는지 살펴보자.
@@ -128,9 +124,20 @@ head(bdf)
 라인 그래프를 그려보자
 
 ```{r}
-
+par(family='Apple SD Gothic Neo')
+theme_set(theme_gray(base_family='Apple SD Gothic Neo'))
 ggplot(bdf, aes(x=period, y=value, group=topic)) + 
   geom_line(aes(color=topic))
+
+```
+
+```{r}
+
+mbdf <- group_by(bdf, period=as.Date(cut(period, "1 month")), topic) %>%
+  summarise(value=sum(value))
+ggplot(bdf, aes(x=period, y=topic)) + 
+  geom_tile(aes(fill=values)) +
+  scale_fill_continuous(low="#ffffff", high="#d334e4") 
 
 ```
 
