@@ -1,2 +1,0 @@
-"0","ggplot(df2, aes(x=period, y=value)) +"
-"0","  geom_point()"

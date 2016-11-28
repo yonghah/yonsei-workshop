@@ -1,2 +1,0 @@
-"0","mdf2 <- group_by(df2, period=as.Date(cut(period, ""1 month"")), topic) %>%"
-"0","  summarise(value=sum(value))"

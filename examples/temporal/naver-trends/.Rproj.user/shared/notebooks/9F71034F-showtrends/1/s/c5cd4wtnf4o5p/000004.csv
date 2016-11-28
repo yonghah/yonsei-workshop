@@ -1,3 +1,0 @@
-"0","library(ggplot2)"
-"0","ggplot(df, aes(x=period, y=value)) +"
-"0","  geom_bar(stat='identity', fill='#652799') "

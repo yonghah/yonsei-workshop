@@ -1,0 +1,35 @@
+---
+title: "Contour"
+author: "황용하"
+date: "11/28/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+R을 설치하면 들어있는 quakes 데이터셋을 이용해보자.
+
+```{r}
+df <- quakes
+head(df)
+```
+
+간단하게 플롯해보자.
+```{r}
+p <- ggplot(df, aes(x=long, y=lat))
+p + geom_point()
+```
+
+등고선을 더해보자.
+```{r}
+p + geom_density2d()
+
+```
+
+면으로.
+
+```{r}
+p + stat_density2d(bins=15, aes(fill = ..level..), geom="polygon") + scale_fill_distiller(palette = "Spectral")
+```

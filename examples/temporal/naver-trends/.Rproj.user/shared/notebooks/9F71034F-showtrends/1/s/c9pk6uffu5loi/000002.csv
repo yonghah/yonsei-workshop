@@ -1,2 +1,0 @@
-"0","ggplot(df, aes(x=period, y=value)) +"
-"0","  geom_line(color=""#943423"", size=0.5)"
